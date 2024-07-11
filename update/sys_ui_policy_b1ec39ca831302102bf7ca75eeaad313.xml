@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_58872_needit_needit">stateIN13,14^EQ<item display_value="13,14" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="13,14"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>400</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+g_form.setReadOnly('description',true);
+g_form.setReadOnly('short_description',true);
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+//  if(g_form.getValue('state') === 1 && g_form.getValue('state') === 2)
+  g_form.setMandatory('description',true);
+  g_form.setMandatory('short_description',true);
+}]]></script_true>
+        <set_values/>
+        <short_description>Make short description  Non editable once ticket moved from initial state </short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-11 08:06:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b1ec39ca831302102bf7ca75eeaad313</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Make short description  Non editable once ticket moved from initial state </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ui_policy_b1ec39ca831302102bf7ca75eeaad313</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-11 08:51:31</sys_updated_on>
+        <table>x_58872_needit_needit</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>
